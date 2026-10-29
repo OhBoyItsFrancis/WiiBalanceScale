@@ -3,3 +3,7 @@
 .vs/
 bin/
 obj/
+.build/
+.swiftpm/
+macOS/build/
+.DS_Store
