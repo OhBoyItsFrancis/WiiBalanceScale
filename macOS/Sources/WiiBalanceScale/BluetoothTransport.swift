@@ -204,9 +204,9 @@ extension BluetoothTransport: IOBluetoothL2CAPChannelDelegate {
             connectionFailed()
             return
         }
-        if l2capChannel.psm == BluetoothL2CAPPSM(WiiProtocol.controlPSM) {
+        if l2capChannel === controlChannel {
             openInterruptChannel()
-        } else if l2capChannel.psm == BluetoothL2CAPPSM(WiiProtocol.interruptPSM) {
+        } else if l2capChannel === interruptChannel {
             status = .connected(deviceName)
             delegate?.transportDidConnect(self)
         }

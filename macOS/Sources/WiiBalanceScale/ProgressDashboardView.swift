@@ -57,6 +57,7 @@ struct ProgressDashboardView: View {
         }
         .sheet(isPresented: $showingGoalEditor) {
             GoalForm(unit: unit) { showingGoalEditor = false }
+                .environmentObject(journal)
                 .padding()
                 .frame(width: 420)
         }
