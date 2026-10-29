@@ -172,7 +172,7 @@ final class BluetoothTransport: NSObject {
         for channel in [interruptChannel, controlChannel] {
             guard let channel else { continue }
             channel.setDelegate(nil)
-            channel.closeChannel()
+            channel.close()
         }
         interruptChannel = nil
         controlChannel = nil
